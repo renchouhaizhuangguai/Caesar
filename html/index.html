@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <script src="../js/jquery-1.11.3.js"></script>
+    <script src="../js/super_slider.js"></script>
+    <script src="../js/animent.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/glide.js"></script>
+    <script >
+        $(function () {
+            /*首页走马灯轮播*/
+            changeMargin();
+            //监听浏览器宽度的改变
+            window.onresize = function(){
+                changeMargin();
+            };
+            function changeMargin(){
+                var page = 3;
+                // 检测当前浏览器宽度
+                var widths= document.body.clientWidth
+                if(widths<1500){
+                    page = 2;
+                }
+                if(widths<950){
+                    page = 1;
+                }
+                if(widths<600){
+                    $('#in_designer .designer ul li').css({'width':widths});
+                }
+                $("#in_designer").superSlider({
+                    prevBtn: 	 ".next",//左按钮
+                    nextBtn: 	 ".prent",//右按钮
+                    listCont:    "#roll",//滚动列表外层
+                    scrollWhere: "next",//自动滚动方向next
+                    delayTime: 	 1500,//自动轮播时间间隔
+                    speed: 		 1000,//滚动速度
+                    amount: 	 1,//单次滚动数量
+                    showNum: 	 page,//显示数量
+                    autoPlay: 	 true//自动播放
+                });
+            }
+        })
+    </script>
+</head>
+<body>
+    <!--header-->
+    <div class="header">
+        <div class="header-inner">
+
+            <!--PC导航-->
+            <ul class="nav">
+                <li><a href="index.html">首页</a></li>
+                <li id="shis"><a href="furniture.html">时尚大牌</a>
+                    <div class="alter">
+                        <div class="a-inner">
+                            <ul class="font">
+                                <li class="active"><a href="#"> 天生贵族Armani Casa </a></li>
+                                <li><a href="#"> 时尚帝国Versace  </a></li>
+                                <li><a href="#"> 奢侈豪品Bottega Veneta  </a></li>
+                                <li><a href="#"> 时尚标志Roberto Cavelli  </a></li>
+                                <li><a href="#"> 豪车跨界Aston Martin </a></li>
+                                <li><a href="#"> 兰博基尼Lamborghini  </a></li>
+                                <li><a href="#"> 休闲新贵Ferre' </a></li>
+                            </ul>
+                            <ul class="img">
+                                <li class="active">
+                                    <img src="../images/img19.jpg" alt="">
+                                </li>
+                                <li>
+                                    <embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&amp;v=20161117&amp;vid=y053754ccor&amp;auto=0" allowfullscreen="true" quality="high" width="100%" height="90%" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
+                                </li>
+                                <li>
+                                    <img src="../images/img19.jpg" alt="">
+                                </li>
+                                <li>
+                                    <embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&amp;v=20161117&amp;vid=y053754ccor&amp;auto=0" allowfullscreen="true" quality="high" width="100%" height="90%" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
+                                </li>
+                                <li>
+                                    <img src="../images/img19.jpg" alt="">
+                                </li>
+                                <li>
+                                    <embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&amp;v=20161117&amp;vid=y053754ccor&amp;auto=0" allowfullscreen="true" quality="high" width="100%" height="90%" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
+                                </li>
+                                <li>
+                                    <img src="../images/img19.jpg" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="furniture.html">奢侈家具</a></li>
+                <li><a href="furniture.html">灯饰饰品</a></li>
+                <li><a href="furniture.html">床垫床品</a></li>
+                <li><a href="extreme.html">凯撒的世界</a></li>
+                <li><a href="tojoin.html">加盟中心</a></li>
+                <li><a href="order.html">在线预约</a></li>
+            </ul>
+        </div>
+        <div class="mheader-inner">
+            <div class="m-left">
+                <div class="top"></div>
+                <div class="bottom"></div>
+            </div>
+            <!--移动导航-->
+            <ul class="m-nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="furniture.html">时尚大牌</a></li>
+                <li><a href="furniture.html">奢侈家具</a></li>
+                <li><a href="furniture.html">灯饰饰品</a></li>
+                <li><a href="furniture.html">床垫床品</a></li>
+                <li><a href="extreme.html">凯撒的世界</a></li>
+            </ul>
+            <div class="m-right"></div>
+            <ul class="m-cnav">
+                <li><a href="tojoin.html">加盟中心</a></li>
+                <li><a href="order.html">在线预约</a></li>
+                <li><a href="">138  1877  1213</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--banner-->
+    <div id="banner">
+        <div class="slider">
+            <ul class="slides">
+                <li class="slide">
+                    <div class="box"><img src="../images/banner.jpg" width="100%"></div>
+                </li>
+                <li class="slide">
+                    <div class="box"><img src="../images/banner.jpg" width="100%"></div>
+                </li>
+                <li class="slide">
+                    <div class="box"><img src="../images/banner.jpg" width="100%"></div>
+                </li>
+            </ul>
+            <div class="arrowsWrapper">
+            </div><div class="slider-nav" >
+        </div>
+        </div>
+        <script>
+            var glide = $('.slider').glide({
+                //autoplay:true,//是否自动播放 默认值 true如果不需要就设置此值
+                animationTime:500, //动画过度效果，只有当浏览器支持CSS3的时候生效
+                arrows:true, //是否显示左右导航器
+                arrowsWrapperClass: "arrowsWrapper",//滑块箭头导航器外部DIV类名
+                arrowMainClass: "slider-arrow",//滑块箭头公共类名
+                arrowRightClass:"slider-arrow--right",//滑块右箭头类名
+                arrowLeftClass:"slider-arrow--left",//滑块左箭头类名
+                arrowRightText:">",//定义左右导航器文字或者符号也可以是类
+                arrowLeftText:"<",
+                nav:true, //主导航器也就是本例中显示的小方块
+                navCenter:true, //主导航器位置是否居中
+                navClass:"slider-nav",//主导航器外部div类名
+                navItemClass:"slider-nav__item", //本例中小方块的样式
+                navCurrentItemClass:"slider-nav__item--current" //被选中后的样式
+            });
+        </script>
+    </div>
+    <!--content-->
+    <div id="content">
+        <div class="center">
+            <!--最新活动-->
+            <div id="in_activity" class="wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                <div class="txt_tablecell">
+                    <div class="title wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="linel"></div>
+                        <div class="text"><a href="#"><h3><img src="../images/in_tt02.png"></h3>最新活动</a></div>
+                        <div class="liner"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!--vip入口-->
+            <div id="in_member" class="wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+
+                <div class="txt_tablecell">
+                    <div class="im_pic"><img src="../images/icon04.png"> </div>
+                    <div class="title wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="linel"></div>
+                        <div class="text"><a href="#"><h3><img src="../images/in_tt01.png"></h3><span>至尊会入口</span></a></div>
+                        <div class="liner"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--vip入口-->
+            <div id="in_brand" class="wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+
+                <div class="txt_tablecell">
+                    <div class="im_pic"></div>
+                    <div class="title wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                        <div class="linel"></div>
+                        <div class="text"><a href="#"><h3><img src="../images/in_tt03.png"></h3><span>品牌展示</span></a></div>
+                        <div class="liner"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!--凯撒至尊 ● 全球案例-->
+    <div id="in_designer" class="center">
+        <div class="prent"></div>
+        <div class="designer" style="width: 1360px">
+            <ul  id="roll">
+                <li>
+                    <a href="">
+                        <img src="../images/img03.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../images/img04.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../images/img05.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../images/img03.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../images/img04.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="../images/img05.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="next"></div>
+        <div class="title wow fadeInUp animated">GLORY CASA ● GLOBAL CASE</div>
+        <p class="wow fadeInUp animated">凯撒至尊 ● 全球案例</p>
+    </div>
+    <!--footer-->
+    <div class="footer">
+        <ul class="f-nav">
+            <li><a href="">其它语言</a></li>
+            <li><a href="relation.html"> 联系我们   </a></li>
+            <li><a href="joinus.html">加入我们 </a></li>
+            <li><a href="statement.html	">法律声明</a></li>
+        </ul>
+        <p>Copyright 2017 沪ICP备12018312号-1</p>
+    </div>
+</body>
+</html>
